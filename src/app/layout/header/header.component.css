@@ -1,0 +1,11 @@
+nav {
+    background-color: #222;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+}

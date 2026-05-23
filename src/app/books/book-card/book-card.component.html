@@ -1,0 +1,23 @@
+<div class="book-card">
+
+    <img [src]="book.coverImage" [alt]="book.title">
+
+    <h3>{{ book.title }}</h3>
+
+    <p class="author">
+        {{ book.author }}
+    </p>
+
+    <p class="rating">
+        ⭐ {{ book.rating || 4.5 }}
+    </p>
+
+    <p class="price">
+        ₹{{ book.price }}
+    </p>
+
+    <button>
+        View Details
+    </button>
+
+</div>
