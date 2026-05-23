@@ -1,1 +1,82 @@
-<p>book-details works!</p>
+<div class="details-page" *ngIf="book">
+
+    <div class="details-container">
+
+        <!-- LEFT -->
+        <div class="image-section">
+
+            <img [src]="book.coverImage" [alt]="book.title">
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="info-section">
+
+            <h1>{{ book.title }}</h1>
+
+            <h3>{{ book.author }}</h3>
+
+            <p class="rating">
+                ⭐ {{ book.rating }}
+            </p>
+
+            <p class="price">
+                ₹{{ book.price }}
+            </p>
+
+            <p>
+                <strong>Category:</strong>
+                {{ book.categoryName }}
+            </p>
+
+            <p>
+                <strong>Language:</strong>
+                {{ book.language }}
+            </p>
+
+            <p>
+                <strong>Pages:</strong>
+                {{ book.numberOfPages }}
+            </p>
+
+            <p>
+                <strong>Available:</strong>
+                {{ book.quantityAvailable }}
+            </p>
+
+            <p>
+                <strong>Published:</strong>
+                {{ book.publicationDate }}
+            </p>
+
+            <button>
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="description-section">
+
+        <h2>Description</h2>
+
+        <p>
+            {{ book.description }}
+        </p>
+
+    </div>
+
+    <!-- REVIEW -->
+    <div class="review-section">
+
+        <h2>Review</h2>
+
+        <p>
+            {{ book.review }}
+        </p>
+
+    </div>
+
+</div>

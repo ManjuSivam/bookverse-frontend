@@ -6,7 +6,7 @@
 
     <div class="content-container">
 
-        <app-sort-bar></app-sort-bar>
+        <app-sort-bar [totalBooks]="books.length" (search)="searchBooks($event)"></app-sort-bar>
 
         <div class="book-grid">
 

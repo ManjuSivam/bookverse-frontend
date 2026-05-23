@@ -32,4 +32,19 @@ export class BookListComponent {
       }
     });
   }
+
+  searchBooks(keyword: string) {
+    if (keyword.trim() === '') {
+      this.getAllBooks();
+      return;
+    }
+    this.bookService.searchBooks(keyword).subscribe({
+      next: (response: Book[]) => {
+        this.books = response;
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    });
+  }
 }
